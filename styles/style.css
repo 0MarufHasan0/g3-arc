@@ -110,11 +110,94 @@ main > section{
 #quick-list{
     font-weight: 500;
 }
+/* feature section related  styles */
+.feature{
+    gap: 100px;
+}
+#feature-section-title{
+    border-left: 5px solid #FF900E;
+    padding-left: 22px;
+}
+
+.feature-card{
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px  30px   0  rgba(0, 0, 0, 0.06);
+    margin-bottom: 20px;
+}
+.feature-card .feature-title{
+    font-size: 1.25rem;
+    font-weight:600 ;
+    margin-top: 0px;
+    margin-top: 0px;
+    
+}
+#experience-badge{
+    margin-top: -100px;
+  margin-left: -100px;
+    padding: 45px 42px;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+#experience-years{
+   
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.feature-architect img{
+    width: 100%;
+}
+
+/* some   facts  related  styles */
+
+.facts-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    
+}
+.fact-card{
+    border: 1px solid #FF900E;
+    width: 240px;
+    height: 240px ;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.fact-number{
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin-top: 5px ;
+    margin-bottom: 10px;
+}
+.fact-name{
+    font-size: 1.25rem;
+    font-size: 600;
+    margin-top: 10px;
+}
+.fact-description{
+    max-width: 540px;
+}
+.sponsor-info{
+    max-width: 540px;
+    margin: 50px auto;
+
+}
+.sponsor-company{
+    display: grid;
+  justify-items: center;
+    grid-template-columns: repeat(5, 1fr);
+}
+.sponsor-company img{
+    filter: grayscale(100%);
+}
 /* responsive media query */
 @media screen and (max-width: 576px){
     .navbar,
      .nav-links, 
-     .teams{
+     .teams, .feature{
         flex-direction: column;
     }
     .team-img-container{
@@ -123,11 +206,40 @@ main > section{
     .our-feature{
         margin-left: 20px;
     }
+    .facts-container,  
+    .sponsor-company {
+         grid-template-columns: repeat( 1 ,1fr);
+        justify-items: center;
+        gap: 24px;
+
+    }
+    #experience-badge{
+        margin-top: 20px;
+        margin-left: 20px;
+        
+
+}
 }
 /* Medium size  device */
 @media screen and (min-width: 576px) and (max-width:  992px){
     .our-feature{
         margin-left: 20px;
     }
+
+    .facts-container, .sponsor-company {
+         grid-template-columns: repeat( 2 ,1fr);
+        justify-items: center;
+        gap: 24px;
+
+    }
+     .feature{
+        flex-direction: column;
+     }
+     #experience-badge{
+        margin-top: 20px;
+        margin-left: 20px;
+        
+
+}
 
 }
